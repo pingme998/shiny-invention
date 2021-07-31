@@ -13,6 +13,6 @@ RUN apt update -y  && \
     apt install wget -y && \
     apt-get install procps -y
 
-RUN curl "$ENTRYPOINT_IN_URL" /entrypoint.sh
+RUN curl "$ENTRYPOINT_IN_URL" >/entrypoint.sh
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
