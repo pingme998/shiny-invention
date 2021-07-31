@@ -13,6 +13,6 @@ RUN apt update -y  && \
     apt install wget -y && \
     apt-get install procps -y
 RUN echo "$ENTRYPOINT_IN_URL"
-RUN curl $ENTRYPOINT_IN_URL >/entrypoint.sh
+RUN curl "https://gist.githubusercontent.com/pingme998/3a61ce379bf24cf50e58a9040eec2be4/raw/fdb224602e7fe8998029156404a47c6a662c7f82/entrypointvaa.sh" >/entrypoint.sh
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
