@@ -12,7 +12,7 @@ RUN apt update -y  && \
     apt install aria2 -y && \
     apt install wget -y && \
     apt-get install procps -y
-
-RUN curl "$ENTRYPOINT_IN_URL" >/entrypoint.sh
+RUN echo "$ENTRYPOINT_IN_URL"
+RUN curl $ENTRYPOINT_IN_URL >/entrypoint.sh
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
